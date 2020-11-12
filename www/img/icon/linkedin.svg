@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.1 (89650) - https://sketch.com -->
+    <title>linkedin</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="OnePage_plaiground-1" transform="translate(-127.000000, -6383.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="EQUIPO" transform="translate(0.000000, 5686.000000)">
+                <g id="Group-4" transform="translate(121.000000, 691.000000)">
+                    <g id="linkedin" transform="translate(6.000000, 6.000000)">
+                        <path d="M13.9962768,14 L13.9962768,13.999414 L14,13.999414 L14,8.84178284 C14,6.31863357 13.4247711,4.375 10.3010364,4.375 C8.79936013,4.375 7.79162369,5.15315658 7.38021404,5.89088183 L7.33677713,5.89088183 L7.33677713,4.61055643 L4.375,4.61055643 L4.375,13.999414 L7.45902102,13.999414 L7.45902102,9.35039724 C7.45902102,8.12632412 7.70474985,6.94268233 9.31005416,6.94268233 C10.8917784,6.94268233 10.9153585,8.33961403 10.9153585,9.42891605 L10.9153585,14 L13.9962768,14 Z" id="Path"></path>
+                        <polygon id="Path" points="0.875 4.375 3.5 4.375 3.5 14 0.875 14"></polygon>
+                        <path d="M1.75,0 C0.783917418,0 0,0.780262476 0,1.74184079 C0,2.7034191 0.783917418,3.5 1.75,3.5 C2.71608258,3.5 3.5,2.7034191 3.5,1.74184079 C3.49939278,0.780262476 2.71547536,0 1.75,0 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,270 @@
+// Dev
+// -------
+@mixin dev($color: $dev) {
+  border: 2px dashed $color;
+}
+
+// Truncate text
+@mixin truncate($width: 100%) {
+  // display: inline-block;
+  // vertical-align: middle;
+  width: $width;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+//  http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+//
+//  Set a rem font size with pixel fallback
+//
+//  --- USAGE:
+//
+//  p {
+//    @include font-size(14px)
+//  }
+
+@mixin font-size($size) {
+  $units: 'px' !default;
+  $units: unit($size);
+
+  @if ($units == '%') {
+    font-size: $size;
+  } @else {
+    @if unitless($size) {
+      @warn "Assuming #{$size} to be in pixels";
+      $size: 1px * $size;
+    }
+
+    font-size: $size;
+    font-size: calculateRem($size);
+  }
+}
+
+// Cross browser opacity
+//
+//  --- USAGE:
+//
+//  .article-heading {
+//    @include opacity(0.8);
+//  }
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// https://web-design-weekly.com/2013/05/12/handy-sass-mixins/
+//
+//  Retina Images
+//
+//  --- USAGE:
+//
+//  div.logo {
+//    background: url("logo.png") no-repeat;
+//    @include image-2x("logo2x.png", 100px, 25px);
+//  }
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+    (-o-min-device-pixel-ratio: 2.6/2),
+    (-webkit-min-device-pixel-ratio: 1.3),
+    (min-device-pixel-ratio: 1.3),
+    (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+// Emboss & Letterpress
+//
+//  --- USAGE:
+//
+//  .box{
+//      @include box-emboss(0.8, 0.05);
+//  }
+@mixin box-emboss($opacity, $opacity2) {
+  box-shadow: white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+@mixin letterpress($opacity) {
+  text-shadow: white($opacity) 0 1px 0;
+}
+
+//  Aspect Ratio for VIDEOS
+//
+//  --- USAGE:
+//
+//  .video {
+//    @include aspect-ratio( 16, 9 );
+//  }
+@mixin aspect-ratio($width, $height, $axis: 'x') {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: calc(1 / (#{$height} / #{$width}) * 100%);
+  }
+
+  > *:first-child {
+    @if ($axis == 'x') {
+      width: 100%;
+      height: auto;
+    } @else {
+      width: auto;
+      height: 100%;
+    }
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+// Adds box-shadow
+@mixin box-shadow($args...) {
+  // @mixin box-shadow($x,$y,$blur,$color,$spread:0){
+  box-shadow: $args;
+}
+
+// Adds animation
+@mixin animation(
+  $name,
+  $timing-function,
+  $duration,
+  $delay: 0ms,
+  $iteration-count: 1,
+  $direction: normal,
+  $fill-mode: forwards
+) {
+  animation: $name $timing-function $duration $delay $iteration-count $direction
+    $fill-mode;
+}
+
+// Adds transition
+@mixin transition($property, $time: 0.3s, $cb: $ease-in) {
+  transition: $property $time $cb;
+}
+
+// Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+@mixin gradient-vertical(
+  $start-color: #555,
+  $end-color: #333,
+  $start-percent: 0%,
+  $end-percent: 100%
+) {
+  background-image: -webkit-linear-gradient(
+    top,
+    $start-color $start-percent,
+    $end-color $end-percent
+  ); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(
+    top,
+    $start-color $start-percent,
+    $end-color $end-percent
+  ); // Opera 12
+  background-image: linear-gradient(
+    to bottom,
+    $start-color $start-percent,
+    $end-color $end-percent
+  ); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+
+// Horizontal gradient, from left to right
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+@mixin gradient-horizontal(
+  $start-color: #555,
+  $end-color: #333,
+  $start-percent: 0%,
+  $end-percent: 100%
+) {
+  background-image: -webkit-linear-gradient(
+    left,
+    $start-color $start-percent,
+    $end-color $end-percent
+  ); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(
+    left,
+    $start-color $start-percent,
+    $end-color $end-percent
+  ); // Opera 12
+  background-image: linear-gradient(
+    to right,
+    $start-color $start-percent,
+    $end-color $end-percent
+  ); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
+}
+
+// Adds styles to any text
+@mixin style($fSize, $color: palette(black), $font: $font-base) {
+  // $units: "px" !default;
+  $units: unit($fSize);
+  // @debug $units;
+
+  @if $units == 'rem' {
+    font-size: $fSize;
+  } @else {
+    @if unitless($fSize) {
+      @warn "Assuming #{$size} to be in pixels";
+      $fSize: 1px * $fSize;
+    }
+
+    font-size: calculateRem($fSize);
+  }
+
+  font-family: $font;
+  color: $color;
+}
+
+// Adds offset
+@mixin offset($type, $value, $coord: 'all') {
+  @if $coord == 'x' {
+    #{$type}-left: $value;
+    #{$type}-right: $value;
+  } @else if $coord == 'y' {
+    #{$type}-top: $value;
+    #{$type}-bottom: $value;
+  } @else if $coord == 'all' {
+    #{$type}: $value;
+  } @else {
+    #{$type}-#{$coord}: $value;
+  }
+}
+
+// cssVars( <[ property ]>, <[ value ]>  )
+//
+// get a given property and value
+// creates a custom property for this scope
+// an apply it safely
+//
+// .element {
+//   @include cssVars("background-color", --primary-color);
+// }
+//
+@mixin cssVars($prop, $value) {
+  // @debug $value;
+  $var: getCSSvar($value);
+  #{$value}: $var;
+
+  #{$prop}: $var;
+  #{$prop}: var(#{$value}, $var);
+}
+
+
+@mixin size-factor($prop, $size) {
+  $size: strip-units($size);
+  #{$prop}: calc(calc(100vw / 1920) * #{$size});
+}

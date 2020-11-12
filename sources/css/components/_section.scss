@@ -1,0 +1,28 @@
+.section {
+  width: 100%;
+  display: block;
+
+  &__image {
+    background: pink;
+    width: 32vw;
+    height: 40vw;
+    min-height: rem(450px);
+  }
+
+  // ELEMENTS
+  &-offer {
+    margin-top: 5rem;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 9rem;
+    }
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}

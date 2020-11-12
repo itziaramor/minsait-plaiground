@@ -1,0 +1,49 @@
+// Namespace
+// -----------
+$namespace: 'Arial';
+
+
+// http://cubic-bezier.com/
+// ease-in fast->slow
+// ease-out slow->fast
+$ease: ease;
+$ease-in: cubic-bezier(0, 0, 0.24, 0.9);
+$ease-out: cubic-bezier(0.59, 0, 0.68, 0.69);
+$ease-in-bounce: cubic-bezier(0.03, 0.27, 0.49, 1.22);
+$ease-out-bounce: cubic-bezier(0.59, 0, 0.59, 1.48);
+$ease-linear: cubic-bezier(0.03, 0.27, 0.44, 0.93);
+$ease-extreme: cubic-bezier(0.68, -0.55, 0.26, 1.55);
+
+// Mediaqueries
+//-----------
+$mobile: 320px !default; // 320px
+$mobile-landscape: 480px !default; // 480px
+$tablet-small: 600px !default; // 600px
+$tablet-medium: 640px !default; // 640px
+$tablet: 768px !default; // 768px
+$tablet-weird: 840px !default; // 840px
+$tablet-large: 1024px !default; // 1024px
+$desktop: 960px !default; // 960px
+$desktop-extralarge: 1360px !default; // 1360px
+$desktop-max-width: 93.75em !default;
+
+// Grid
+//-----------
+$max-width: $desktop-max-width;
+
+
+$grid-breakpoints: (
+  xxs: 380px,
+  xs: 576px,
+  xsm: 640px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1200px,
+  xl: 1440px,
+  xxl: 1920px,
+);
+
+// Utilities
+//-----------
+$gutter: 1em;
+

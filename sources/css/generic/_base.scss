@@ -1,0 +1,39 @@
+.outer-wrap {
+  max-width: rem(1920px);
+  margin: 0 auto;
+
+  font-family: $font-base;
+  font-size: rem(16px);
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    height: auto;
+  }
+}
+
+.inner-wrap {
+  padding-left: rem(16px);
+  padding-right: rem(16px);
+
+  @include media-breakpoint-up(md) {
+    padding-left: rem(19px);
+    padding-right: rem(19px);
+  }
+  @include media-breakpoint-up(lg) {
+    max-width: rem(1200px); // confirmar con el sketch
+    margin: 0 auto;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-left: 0;
+    padding-right: 0;
+
+    .iexplorer & {
+      max-width: none;
+      width: rem(1003px);
+    }
+  }
+}

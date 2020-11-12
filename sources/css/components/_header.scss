@@ -1,0 +1,343 @@
+.header {
+  padding: rem(18px) rem(30px);
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+  background: none;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  transition: all ease-out 0.3s;
+
+  @include media-breakpoint-up(xs) {
+    padding: rem(18px) rem(14px);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: all ease-out 0.3s;
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding: rem(34px) rem(66px);
+  }
+  @include media-breakpoint-up(md) {
+    padding: rem(34px) rem(66px) rem(34px);
+  }
+  @include media-breakpoint-up(lg) {
+    padding: rem(34px) rem(120px) rem(34px);
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: rem(1920px);
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__logo {
+    width: rem(142px);
+
+    img {
+      width: rem(142px);
+    }
+
+    @include media-breakpoint-up(xs) {
+      width: rem(152px);
+
+      img {
+        width: auto;
+        max-width: 100%;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      width: rem(248px);
+    }
+  }
+
+  &__right {
+    @include media-breakpoint-up(xs) {
+      min-height: 100%;
+      display: flex;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    padding: rem(144px) rem(23px) 0;
+    top: 0;
+    margin-top: 0 !important;
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    // left: 0;
+    left: inherit;
+    right: 0;
+    z-index: 110;
+    width: 75%;
+    max-width: rem(299px);
+    height: 100%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform 250ms ease-in;
+
+    @include media-breakpoint-up(xs) {
+      width: 100%;
+      max-width: inherit;
+      height: auto;
+      padding: 0;
+      background: none;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      top: 0;
+      right: 0;
+      transform: translate3d(0%, 0, 0);
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-right: rem(120px);
+    }
+
+    &__close {
+      width: rem(26px);
+      height: rem(26px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      position: absolute;
+      top: rem(20px);
+      right: rem(15px);
+
+      @include media-breakpoint-up(xs) {
+        display: none;
+      }
+
+      &-icon {
+        width: rem(16px);
+        height: rem(16px);
+        display: flex;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+
+      @include media-breakpoint-up(xs) {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+      }
+
+      // States
+      &.is-scrolling {
+        a:not(.is-current-target) {
+          &::after {
+            opacity: 0 !important;
+          }
+        }
+      }
+
+      li:last-child {
+        a {
+          margin-right: 0;
+        }
+      }
+
+      a {
+        margin: rem(7px) 0;
+        padding: rem(7px) 0;
+        font-family: $font-base;
+        font-weight: bold;
+        font-size: rem(32px);
+        color: $white;
+        text-decoration: none;
+        letter-spacing: -1.28px;
+        display: block;
+
+        @include media-breakpoint-up(xs) {
+          margin: 0 rem(5px);
+          padding: 0;
+          font-size: rem(15px);
+          color: $black;
+          letter-spacing: 0;
+          display: flex;
+        }
+        @include media-breakpoint-up(sm) {
+          margin: 0 rem(5px);
+          padding: 0 rem(5px);
+        }
+        @include media-breakpoint-up(md) {
+          position: relative;
+          &::after {
+            content: "";
+            width: 0;
+            height: rem(2px);
+            background-color: $cta-primary;
+            position: absolute;
+            bottom: rem(-7px);
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transition: all ease-out 0.3s;
+          }
+
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+
+          // States
+          &.is-active,
+          &.is-current-target {
+            &::after {
+              width: 100%;
+            }
+          }
+          &.is-current-target {
+            &::after {
+              background-color: $black;
+            }
+          }
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: rem(18px);
+        }
+      }
+    }
+
+    // states
+    &.is-open {
+      transform: translate3d(0%, 0, 0);
+      transition: all 250ms ease-in;
+      right: 0;
+    }
+  }
+
+  // burger menu
+  .burger-menu {
+    border: none;
+    background: none;
+    box-shadow: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: rem(10px);
+    position: absolute;
+    right: 13px;
+    top: calc(50% - 19px);
+
+    @include media-breakpoint-up(xs) {
+      display: none;
+    }
+
+    .bar {
+      width: rem(23px);
+      height: rem(2px);
+      background-color: $white;
+      margin: rem(4px) 0;
+      transition: all ease-out 0.2s;
+    }
+
+    .invisible {
+      width: rem(23px);
+      height: rem(2px);
+      margin: rem(4px) 0;
+    }
+
+    // states
+
+    &.is-open {
+      .bar1 {
+        transform: rotate(-45deg) translate(-2px, 3px);
+      }
+
+      .bar3 {
+        transform: rotate(45deg) translate(0, -3px);
+      }
+    }
+  }
+
+  // active
+  &.fix {
+    position: fixed;
+    background: rgba(255, 255, 255, 1);
+
+    @include media-breakpoint-up(md) {
+      padding: rem(24px) rem(66px);
+    }
+    @include media-breakpoint-up(lg) {
+      padding: rem(24px) rem(120px);
+    }
+
+    .navbar {
+      &__list {
+        a {
+          color: $black;
+        }
+      }
+    }
+
+    // burger menu
+    .burger-menu {
+      .bar {
+        background-color: $black;
+      }
+    }
+
+    &.dark {
+      .navbar {
+        &__list {
+          a {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  &.dark {
+    .navbar {
+      &__list {
+        a {
+          color: $black;
+        }
+      }
+    }
+
+    // burger menu
+    .burger-menu {
+      .bar {
+        background-color: $black;
+      }
+    }
+  }
+
+  &.veil {
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100vh;
+      background-color: $black;
+      opacity: 0.8;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+  }
+}

@@ -1,0 +1,365 @@
+.showcase-carousel {
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    width: calc(100% - 120px);
+  }
+
+  &__content {
+    padding-bottom: rem(28px);
+
+    @include media-breakpoint-up(sm) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__item {
+    @include media-breakpoint-up(xs) {
+      display: flex !important;
+    }
+    @include media-breakpoint-up(sm) {
+      align-items: flex-end;
+    }
+    @include media-breakpoint-up(md) {
+      display: flex !important;
+      align-items: stretch;
+    }
+    @include media-breakpoint-up(lg) {
+      align-items: center;
+    }
+
+    &--md {
+      .showcase-carousel__title {
+        @include media-breakpoint-up(md) {
+          margin-bottom: rem(62px);
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: get-vw(100px);
+          line-height: get-vw(100px);
+        }
+        @include media-breakpoint-up(xl) {
+          font-size: get-vw(120px);
+          line-height: get-vw(120px);
+        }
+        @include media-breakpoint-up(xl) {
+          font-size: get-vw(100px);
+          line-height: get-vw(100px);
+        }
+      }
+
+      .showcase-carousel__text {
+        @include media-breakpoint-up(md) {
+          max-width: rem(470px);
+          width: 100%;
+        }
+      }
+    }
+
+    &--lg {
+      align-items: center;
+
+      @include media-breakpoint-up(xs) {
+        background-image: url("../img/showcase/showcase-03.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: rem(518px);
+      }
+      @include media-breakpoint-up(sm) {
+        min-height: rem(657px);
+      }
+      @include media-breakpoint-up(lg) {
+        min-height: rem(802px);
+      }
+
+      .showcase-carousel__text {
+        @include media-breakpoint-up(md) {
+          max-width: rem(370px);
+          margin-left: auto;
+        }
+      }
+      .showcase-carousel__title {
+        font-size: rem(40px);
+        line-height: rem(40px);
+
+        @include media-breakpoint-up(sm) {
+          font-size: rem(50px);
+          line-height: rem(50px);
+        }
+        @include media-breakpoint-up(md) {
+          margin-bottom: 0;
+          font-size: get-vw(100px);
+          line-height: get-vw(100px);
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: get-vw(120px);
+          line-height: get-vw(120px);
+        }
+      }
+      .showcase-carousel__image {
+        @include media-breakpoint-up(xs) {
+          display: none;
+        }
+      }
+      .showcase-carousel__description {
+        @include media-breakpoint-up(xs) {
+          width: 100%;
+          padding: rem(80px) 0 rem(40px) 0;
+          width: 75vw;
+          margin: 0 auto;
+        }
+        @include media-breakpoint-up(lg) {
+          width: 65vw;
+        }
+      }
+    }
+  }
+
+  &__image {
+    @include media-breakpoint-up(xs) {
+      max-width: rem(260px);
+      width: 100%;
+    }
+    @include media-breakpoint-up(sm) {
+      max-width: rem(330px);
+    }
+    @include media-breakpoint-up(md) {
+      width: rem(444px);
+      max-width: inherit;
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: rem(609px);
+      width: auto;
+    }
+
+    picture {
+      display: block;
+      height: 100%;
+
+      > img {
+        @include media-breakpoint-up(xs) {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    img,
+    video {
+      width: 100%;
+    }
+
+    .showcase-carousel__video {
+      &-tablet,
+      &-desktop {
+        display: none;
+      }
+
+      // video queries
+      &-desktop {
+        @include media-breakpoint-up(md) {
+          display: block;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &-tablet {
+        @include media-breakpoint-up(xs) {
+          display: block;
+          height: 100%;
+          object-fit: cover;
+        }
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
+      }
+      &-mobile {
+        display: block;
+        @include media-breakpoint-up(xs) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__description {
+    padding: rem(40px) rem(30px) rem(40px);
+
+    @include media-breakpoint-up(xs) {
+      width: span(3.005 of 6);
+      margin-left: auto;
+      padding: rem(88px) rem(30px) rem(24px) 0;
+    }
+    @include media-breakpoint-up(xsm) {
+      padding: rem(88px) rem(62px) rem(24px) 0;
+    }
+    @include media-breakpoint-up(sm) {
+      width: span(3.1 of 6);
+      margin-left: auto;
+      padding: rem(40px) rem(66px) rem(38px) 0;
+    }
+    @include media-breakpoint-up(md) {
+      width: span(5.5 of 12);
+      margin-left: span(1 of 12);
+      padding: rem(136px) 0 rem(36px);
+    }
+    @include media-breakpoint-up(lg) {
+      width: span(4.4 of 12);
+      padding: rem(104px) 0 rem(36px);
+    }
+
+    p {
+      margin-bottom: rem(23px);
+      font-size: rem(15px);
+      font-weight: normal;
+      line-height: rem(20px);
+      color: $black-400;
+
+      @include media-breakpoint-up(xs) {
+        margin-bottom: rem(16px);
+      }
+      @include media-breakpoint-up(sm) {
+        margin-bottom: rem(23px);
+      }
+
+      strong {
+        display: block;
+        font-weight: bold;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(40px);
+    font-family: "arial", sans-serif !important;
+    font-weight: bold;
+    font-size: rem(40px);
+    line-height: rem(40px);
+    letter-spacing: -2.6px;
+    color: $black;
+
+    @include media-breakpoint-up(xxs) {
+      font-size: rem(50px);
+      line-height: rem(50px);
+    }
+    @include media-breakpoint-up(xs) {
+      margin-bottom: rem(24px);
+      font-size: rem(40px);
+      line-height: rem(40px);
+    }
+    @include media-breakpoint-up(sm) {
+      margin-bottom: rem(48px);
+      font-size: rem(54px);
+      line-height: rem(54px);
+
+      // margin-bottom: rem(56px);
+      // font-size: rem(70px);
+      // line-height: rem(70px);
+    }
+    @include media-breakpoint-up(md) {
+      margin-bottom: rem(32px);
+      font-size: get-vw(100px);
+      line-height: get-vw(100px);
+      letter-spacing: -3.2px;
+
+      span {
+        display: block;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: get-vw(120px);
+      line-height: get-vw(120px);
+    }
+    @include media-breakpoint-up(xl) {
+      letter-spacing: -4px;
+      font-size: get-vw(140px);
+      line-height: get-vw(140px);
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: get-vw(120px);
+      line-height: get-vw(120px);
+    }
+  }
+
+  &__buttons {
+    margin-top: rem(35px);
+    display: flex;
+    flex-wrap: wrap;
+    width: rem(200px);
+    display: none;
+
+    @include media-breakpoint-up(sm) {
+      margin-top: rem(56px);
+      width: auto;
+      margin-bottom: 0;
+      flex-wrap: nowrap;
+    }
+
+    .btn {
+      margin-bottom: rem(20px);
+      margin-left: 0;
+
+      @include media-breakpoint-up(sm) {
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+
+        @include media-breakpoint-up(sm) {
+          margin-left: rem(30px);
+        }
+      }
+    }
+  }
+
+  // slick
+  .slick-slider {
+    .slick-prev,
+    .slick-next {
+      bottom: 0;
+
+      @include media-breakpoint-up(xs) {
+        left: inherit;
+        bottom: rem(20px);
+        right: rem(21px);
+      }
+      @include media-breakpoint-up(sm) {
+        bottom: rem(2px);
+      }
+      @include media-breakpoint-up(lg) {
+        bottom: rem(64px);
+      }
+    }
+
+    .slick-next {
+      @include media-breakpoint-up(sm) {
+        right: rem(66px);
+      }
+      @include media-breakpoint-up(md) {
+        right: rem(-54px);
+      }
+      @include media-breakpoint-up(lg) {
+        right: 0;
+      }
+    }
+
+    .slick-prev {
+      @include media-breakpoint-up(xs) {
+        right: rem(74px);
+      }
+      @include media-breakpoint-up(sm) {
+        right: rem(140px);
+      }
+      @include media-breakpoint-up(md) {
+        right: rem(20px);
+      }
+      @include media-breakpoint-up(lg) {
+        right: rem(74px);
+      }
+    }
+  }
+}

@@ -1,0 +1,360 @@
+.offer {
+  overflow: hidden;
+
+  @include media-breakpoint-up(sm) {
+    padding: 0 rem(64px);
+  }
+  @include media-breakpoint-up(md) {
+    padding: 0 rem(66px);
+    margin-top: rem(40px);
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 0 rem(120px);
+  }
+
+  &__title {
+    margin-bottom: rem(50px);
+    padding: 0 rem(30px);
+    font-family: $font-base;
+    font-weight: bold;
+    font-size: rem(50px);
+    line-height: rem(50px);
+    letter-spacing: -0.58px;
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: rem(70px);
+      padding: 0;
+      font-size: rem(70px);
+      line-height: rem(70px);
+      letter-spacing: -0.81px;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: rem(95px);
+      font-size: get-vw(100px);
+      line-height: get-vw(100px);
+      letter-spacing: -0.93px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      letter-spacing: -1.16px;
+    }
+
+    span {
+      display: block;
+
+      @include media-breakpoint-up(sm) {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__list {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: block;
+      max-width: rem(346px);
+      margin-left: rem(22px);
+      margin-top: rem(-22px);
+      transform: rotate(-90deg);
+    }
+
+    li {
+      padding: rem(60px) 0;
+      border-bottom: 1px solid $black;
+      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+
+      @include media-breakpoint-up(md) {
+        padding: rem(46px) 0;
+      }
+
+      a {
+        font-size: rem(22px);
+        line-height: rem(36px);
+        font-family: $font-base;
+        font-weight: bold;
+        color: $black;
+
+        @include media-breakpoint-up(md) {
+          position: relative;
+          &::after {
+            content: "";
+            width: 0;
+            height: rem(2px);
+            background-color: $black;
+            position: absolute;
+            bottom: rem(-7px);
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transition: all ease-out 0.3s;
+          }
+
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      &:first-child {
+        border-top: 1px solid $black;
+      }
+    }
+  }
+
+  // item
+  &__item {
+    position: relative;
+    @include media-breakpoint-up(md) {
+      width: span(7 of 12);
+      margin-left: auto;
+      margin-right: rem(-66px);
+    }
+    @include media-breakpoint-up(xl) {
+      margin-right: rem(-120px);
+    }
+
+    &-image {
+      @include media-breakpoint-up(xl) {
+        width: calc(100% - 20px);
+        margin-left: auto;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    // modifier
+
+    &--right {
+      @include media-breakpoint-up(md) {
+        margin-top: rem(-410px);
+        z-index: 3;
+      }
+    }
+    &--first {
+      @include media-breakpoint-up(md) {
+        margin-top: rem(-366px);
+      }
+    }
+    &--left {
+      @include media-breakpoint-up(md) {
+        width: span(7 of 12);
+        margin-left: rem(-66px);
+        margin-right: 0;
+        margin-top: rem(-500px);
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-top: -50%;
+      }
+
+      .offer__box {
+        width: 100%;
+        padding: rem(27px) rem(30px);
+
+        @include media-breakpoint-up(sm) {
+          width: span(5 of 6);
+          margin-top: rem(-16px);
+          margin-left: 0;
+          padding: rem(80px) rem(80px);
+          position: relative;
+          z-index: 3;
+        }
+        @include media-breakpoint-up(md) {
+          width: 100%;
+          padding-right: span(1 of 6);
+        }
+        @include media-breakpoint-up(xl) {
+          padding-bottom: rem(140px);
+        }
+
+        .offer__box-description {
+          @include media-breakpoint-up(sm) {
+            max-width: 100%;
+          }
+          @include media-breakpoint-up(lg) {
+            max-width: 82%;
+          }
+          @include media-breakpoint-up(xl) {
+            max-width: 61%;
+          }
+        }
+
+        .offer__box-title {
+          @include media-breakpoint-up(sm) {
+            margin-bottom: rem(20px);
+          }
+        }
+      }
+
+      .offer__item-image {
+        @include media-breakpoint-up(sm) {
+          width: span(4 of 6);
+          position: relative;
+          z-index: 2;
+        }
+        @include media-breakpoint-up(md) {
+          width: span(4.5 of 6);
+          margin-left: rem(66px);
+        }
+      }
+
+      .offer__item-texture {
+        display: none;
+
+        @include media-breakpoint-up(sm) {
+          //width: 430px;
+          width: span(4 of 6);
+          display: block;
+          position: absolute;
+          right: rem(-66px);
+          top: rem(76px);
+        }
+
+        @include media-breakpoint-up(md) {
+          width: calc(100% - 30px);
+          top: rem(290px);
+          right: inherit;
+          left: 0;
+        }
+        @include media-breakpoint-up(lg) {
+          width: calc(100% - 60px);
+          top: rem(306px);
+        }
+        @include media-breakpoint-up(xl) {
+          // width: calc(100% - 120px);
+          left: rem(-120px);
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // box
+  &__box {
+    width: calc(100% - 30px);
+    margin-top: rem(-37px);
+    margin-left: auto;
+    padding: rem(27px) rem(27px);
+    background-color: $white;
+    // background: #ffc0cb69;
+    position: relative;
+
+    @include media-breakpoint-up(sm) {
+      width: calc(100% + 30px);
+      margin-left: span(1 of 6);
+      padding: rem(80px) rem(78px);
+    }
+    @include media-breakpoint-up(md) {
+      padding: rem(80px) rem(68px);
+    }
+    @include media-breakpoint-up(xl) {
+      padding-bottom: rem(90px);
+    }
+
+    &-description {
+      @include media-breakpoint-up(sm) {
+        max-width: 84%;
+      }
+      @include media-breakpoint-up(xl) {
+        max-width: rem(350px);
+      }
+    }
+
+    &-title {
+      margin-bottom: rem(54px);
+      font-family: $font-base;
+      font-weight: bold;
+      font-size: rem(28px);
+      line-height: rem(31px);
+
+      @include media-breakpoint-up(sm) {
+        margin-bottom: rem(41px);
+        line-height: rem(20px);
+      }
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: rem(41px);
+        line-height: rem(20px);
+      }
+    }
+
+    p {
+      margin-bottom: rem(24px);
+      font-weight: normal;
+      font-size: rem(15px);
+      line-height: rem(20px);
+
+      @include media-breakpoint-up(sm) {
+        margin-bottom: rem(20px);
+      }
+
+      strong {
+        display: inline-block;
+        font-weight: bold;
+      }
+
+      &.date {
+        padding-top: rem(8px);
+        font-size: rem(15px);
+        line-height: rem(20px);
+
+        @include media-breakpoint-up(sm) {
+          padding-top: rem(26px);
+        }
+
+        span {
+          font-weight: bold;
+
+          &::after {
+            content: "";
+            width: rem(69px);
+            height: rem(1px);
+            margin-left: rem(6px);
+            margin-right: rem(6px);
+            background-color: $black;
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    // modifier
+    &--left {
+      @include media-breakpoint-up(sm) {
+        width: span(5.1 of 7);
+        margin-left: 0;
+        padding: rem(80px) span(1 of 5) rem(70px) 0;
+      }
+      @include media-breakpoint-up(xl) {
+        padding-bottom: rem(90px);
+      }
+
+      .offer__box-description {
+        @include media-breakpoint-up(sm) {
+          max-width: 100%;
+        }
+        @include media-breakpoint-up(xl) {
+          max-width: rem(350px);
+        }
+      }
+
+      p.date {
+        @include media-breakpoint-up(sm) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

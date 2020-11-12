@@ -1,0 +1,31 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "3.0.0",
+    "gulp": "3.9.1",
+    "gulp-clean-css": "3.9.0",
+    "gulp-concat": "2.6.1",
+    "gulp-file-include": "1.2.0",
+    "gulp-notify": "3.0.0",
+    "gulp-pngquant": "1.0.12",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "3.1.0",
+    "gulp-sourcemaps": "2.6.1",
+    "gulp-strip-css-comments": "1.2.0",
+    "gulp-svgmin": "1.2.4",
+    "gulp-uglify": "3.0.1",
+    "pump": "3.0.0",
+    "run-sequence": "2.2.0"
+  },
+  "dependencies": {
+    "dom-classes": "^1.0.0",
+    "dom-create-element": "^1.0.2",
+    "dom-events": "^0.1.1",
+    "prefix": "^1.0.0",
+    "smooth-scrolling": "^2.3.12",
+    "susy": "^3.0.5",
+    "virtual-scroll": "^1.5.2"
+  }
+}

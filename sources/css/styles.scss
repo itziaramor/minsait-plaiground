@@ -1,0 +1,67 @@
+// settings
+// ------------
+@import "settings/colors";
+@import "settings/variables";
+@import "settings/fonts";
+
+// tools
+// -------------------------
+@import "tools/functions";
+@import "tools/mixins";
+@import "tools/breakpoints";
+@import "tools/pxtorem";
+
+// generic
+// -------------------------
+@import "generic/reset";
+@import "generic/base";
+@import "generic/buttons";
+@import "generic/custom-slick";
+
+// Lib
+// ------------
+@import "lib/slick";
+@import "lib/slick-theme";
+
+/* app.scss */
+@import "susy";
+
+// Susy: setting default grid
+// -----------------------------------------------------------------------------
+$susy: (
+  "columns": susy-repeat(6),
+  "gutters": 24px,
+  "spread": "narrow",
+  "container-spread": "narrow",
+);
+@include media-breakpoint-up(lg) {
+  $susy: (
+    "columns": susy-repeat(12),
+    "gutters": 30px,
+    "spread": "narrow",
+    "container-spread": "narrow",
+  );
+}
+
+// Components
+// ------------
+@import "components/header";
+@import "components/footer";
+@import "components/section";
+@import "components/team";
+@import "components/values";
+@import "components/showcase-carousel";
+@import "components/showcase-news";
+@import "components/offer";
+@import "components/wpcf7";
+// @import 'components/projects';
+
+// Overrides
+// -------------------------
+
+// Themes
+// ------------
+
+// utilities
+// -------------------------
+@import "utilities/utils";

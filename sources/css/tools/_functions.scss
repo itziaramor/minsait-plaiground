@@ -1,0 +1,109 @@
+// gets a specific value from the fake custom properties map
+// $vars is the map, you could find it @ variables.scss
+@function getCSSvar($key){
+  // @debug  map-keys($vars);
+  // @debug $key;
+  @if map-has-key($vars, $key){
+    @return map-get($vars, $key);
+  }
+}
+
+
+// http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+//
+//  Set a rem font size with pixel fallback
+//
+//  --- USAGE:
+//
+//  p {
+//    @include font-size(14px)
+//  }
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+// http://sachagreif.com/useful-sass-mixins/
+//
+//  Black & White
+//
+//  --- USAGE:
+//
+//  .my-class{
+//    background:black(0.15);
+//    color:white(0.9);
+//  }
+
+@function black($opacity){
+  @return rgba(0,0,0,$opacity);
+}
+
+@function white($opacity){
+  @return rgba(255,255,255,$opacity);
+}
+
+// https://www.sitepoint.com/using-sass-maps/
+//
+//  Z-INDEX return key/value from MAP
+//
+//  --- USAGE:
+//
+//  .overlay {
+//    z-index: z(overlay);
+//  }
+//
+//  .element {
+//    z-index: (z(default) + 1);
+//  }
+
+@function z($key) {
+  @if map-has-key($z-layers, $key) {
+    @return map-get($z-layers, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $z-layers.";
+  @return null;
+}
+
+
+// PX to EM
+// Sass function credit:
+// https://css-tricks.com/snippets/sass/px-to-em-functions/
+// https://css-tricks.com/building-resizeable-components-relative-css-units/
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+
+// get KEY from MAP - COLOUR PALETTES
+// http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+
+@function palette($palette, $tone: 'base') {
+  @if map-has-key($palettes-neutral, $palette) {
+    @return map-get(map-get($palettes-neutral, $palette), $tone);
+  }
+
+  @warn "Unknown `#{$palette}` in $palettes-neutral.";
+  @return null;
+}
+
+@function translateToCustomProperties($prop1) {
+
+}
+
+
+@function strip-units($number) {
+  // @debug $number;
+  @return $number / ($number * 0 + 1);
+}
+
+
+
+// px to vw
+@function get-vw($target) {
+  $vw-context: (1920 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+

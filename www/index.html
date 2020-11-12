@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="title" content="">
+  <meta name="description" content="">
+  <meta name="keywords" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plaiground</title>
+  <!-- <link rel="stylesheet" type="text/css" href="css/lib/jquery.bxslider.css" media="screen"> -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+
+
+</head>
+
+<body class="">
+<div class="main-scrollbar">
+  <!-- HEADER -->
+  <header class="header">
+    <a href="/" class="header__logo">
+      <img src="img/icon/plaiground.svg" alt="Plaiground">
+    </a>
+    <div class="header__right">
+      <button type="button" class="burger-menu js-menu" aria-haspopup="true" aria-expanded="false">
+        <div class="bar bar1"></div>
+        <div class="invis"></div>
+        <div class="bar bar3"></div>
+      </button>
+
+      <nav class="navbar">
+        <a href="#" class="navbar__close js-close">
+          <span class="navbar__close-icon">
+            <svg>
+              <use xlink:href="../../img/sprite.svg#close">
+            </svg>
+          </span>
+        </a>
+        <ul class="navbar__list">
+          <li><a href="#showcase" class="btn-anchor btn-news">Noticias</a></li>
+          <li><a href="#values" class="btn-anchor">Valores</a></li>
+          <li><a href="#offer" class="btn-anchor">Servicios</a></li>
+          <li><a href="#team" class="btn-anchor">Equipo</a></li>
+          <li><a href="#footer" class="btn-anchor">Contacto</a></li>
+        </ul>
+      </nav> <!-- navbar -->
+    </div>
+  </header> <!-- header -->
+
+  <!--MAIN-->
+  <main class="main">
+
+    <div class="outer-wrap">
+      <a class="cta cta--sticky btn-anchor" href="#footer">Contacta</a>
+
+      <section class="section section--showcase-carousel" id="hero">
+        <div class="showcase-carousel">
+          <div class="showcase-carousel__content js-showcase-carousel">
+            <div class="showcase-carousel__item">
+              <div class="showcase-carousel__image">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="http://plaiground.dev.boream.com/wp-content/uploads/2020/05/Foto_desktop.png">
+                  <source media="(min-width: 576px)" srcset="http://plaiground.dev.boream.com/wp-content/uploads/2020/05/Foto_tablet.png">
+                  <source media="(max-width: 575px)" srcset="http://plaiground.dev.boream.com/wp-content/uploads/2020/05/Foto_mobile.png">
+                  <img src="http://plaiground.dev.boream.com/wp-content/uploads/2020/05/Foto_desktop.png">
+                </picture>
+              </div>
+              <div class="showcase-carousel__description">
+                <h2 class="showcase-carousel__title"><span>Plaiground </span> is here</h2>
+                <div class="showcase-carousel__text">
+                  <p> Exponential times, exponential organizations, exponential viruses. Disruption in all sectors of activity.</p>
+                  <p> We are not experts, we do not believe in them. We are explorers. </p>
+                  <p> We orchestrate talent from all corners of the world to create products endowed with cognitive abilities. </p>
+                  <p><strong> The future is already here, only badly distributed. Hello, we are Plaiground </strong></p>
+                  <a class="cta cta--hero btn-anchor" href="#footer">Contacta con nosotros</a>
+                </div>
+              </div>
+            </div> <!-- showcase-carousel__item -->
+          </div>
+        </div> <!-- showcase-carousel -->
+      </section> <!-- section-showcase-carousel -->
+
+      <section class="section section--showcase-news" id="showcase">
+        <div class="showcase-news">
+          <div class="showcase-news__content js-showcase-news">
+            <div class="showcase-news__item">
+              <div class="showcase-news__image">
+                <video autoplay="" playsinline="" muted="" loop="" class="showcase-news__video-desktop" id="video">
+                  <source src="img/video/VideoCarrusel-1200.mp4" type="video/mp4" id="source">
+                </video>
+                <video autoplay="" playsinline="" muted="" loop="" class="showcase-news__video-tablet">
+                  <source src="img/video/VideoCarrusel-768.mp4" type="video/mp4">
+                </video>
+                <video autoplay="" playsinline="" muted="" loop="" class="showcase-news__video-mobile">
+                  <source src="img/video/VideoCarrusel-576.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="showcase-news__description">
+                <h3 class="showcase-news__uptitle">Noticias</h3>
+                <h1 class="showcase-news__title">Empoderamos al ciudadano</h1>
+                <div class="showcase-news__text">
+                  <p>En la crisis sanitaria mundial causada por el Covid-19, es imprescindible la cooperación entre ciudadanos. Pero, ¿cómo puede el ciudadano protegerse, mientras asegura su privacidad?</p>
+                  <p>Plaiground propone una app colaborativa que, a cambio de la colaboración de cada usuario de forma individual y anónima, le informa sobre su exposición al Covid-19 en cada momento. Así, le facilita el control de su seguridad. Al mismo tiempo, sus políticas de anonimización facilitan al usuario el control total de sus datos.</p>
+                  <p><strong>La IA es muy poderosa y puede utilizarse para generar impacto social. ¡Ganemos todos!</strong></p>
+                  <div class="showcase-news__buttons">
+                    <a href="#" class="btn btn--primary btn--primary-sm"><span class="sr-only">Descargar app </span>iOS</a>
+                    <a href="#" class="btn btn--primary btn--primary-sm"><span class="sr-only">Descargar app </span>Android</a>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- showcase-news__item -->
+            <div class="showcase-news__item">
+              <div class="showcase-news__image">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="img/showcase/showcase-03.jpg">
+                  <source media="(min-width: 576px)" srcset="img/showcase/showcase-tablet-03.jpg">
+                  <source media="(max-width: 575px)" srcset="img/showcase/showcase-mobile-03.jpg">
+                  <img src="img/showcase/showcase-03.jpg">
+                </picture>
+              </div>
+              <div class="showcase-news__description">
+                <h3 class="showcase-news__uptitle">Noticias</h3>
+                <h2 class="showcase-news__title">Somos embajadores <span>de deeplearning.ai</span> en España</h2>
+                <div class="showcase-news__text">
+                  <p>Desde Febrero de 2020, Plaiground organiza el <span>meetup “Pie & AI in Madrid” con el patrocinio de AWS,</span> Nvidia y Minsait.</p>
+                  <p>Esta es la primera comunidad de deeplearners en <span>Madrid bajo la alianza con la empresa de Andrew NG,</span> deeplearning.ai</p>
+                </div>
+              </div>
+            </div> <!-- showcase-news__item -->
+          </div>
+        </div> <!-- showcase-news -->
+      </section> <!-- section-showcase-news -->
+
+      <section class="section section-offer" id="offer">
+        <div class="offer">
+          <h2 class="offer__title">
+            <span>Qué te</span> ofrecemos
+          </h2>
+
+          <ul class="offer__list">
+            <li><a href="#businessFoundations" class="btn-anchor">Business <span>foundations</span></a></li>
+            <li><a href="#cognitiveCapabilities" class="btn-anchor">Cognitive <span>capabilities</span></a></li>
+            <li><a href="#businessImpact" class="btn-anchor">Business <span>impact</span></a></li>
+          </ul>
+
+          <div class="offer__item offer__item--right offer__item--first">
+            <div class="offer__item-image">
+              <picture>
+                <source media="(min-width: 769px)" srcset="img/offer/offer-01.jpg">
+                <source media="(min-width: 481px)" srcset="img/offer/offer-tablet-01.jpg">
+                <source media="(max-width: 480px)" srcset="img/offer/offer-mobile-01.jpg">
+                <img src="img/offer/offer-01.jpg" class="thumbnail">
+              </picture>
+            </div>
+
+            <div class="offer__box" id="businessFoundations" data-paralax-speed="0.1">
+              <div class="offer__box-description">
+                <h3 class="offer__box-title">Business foundations</h3>
+                <p><strong>¿Cómo?</strong></p>
+                <p>Ayudamos a que cada empresa cuente con una ética algorítmica, un gobierno del dato y una organización corporativa propicia, creando una estrategia de la IA para evolucionar en la dirección acertada</p>
+                <a class="cta cta--link btn-anchor" href="#footer"><span>→</span> Conóncenos mejor</a>
+              </div>
+            </div>
+          </div> <!-- offer__item -->
+
+          <div class="offer__item offer__item--left">
+            <div class="offer__item-texture">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/offer/offer-texture-xxl.png">
+                <source media="(min-width: 1024px)" srcset="img/offer/offer-texture-md.png">
+                <source media="(min-width: 769px)" srcset="img/offer/offer-texture-sm.png">
+                <source media="(min-width: 481px)" srcset="img/offer/offer-texture-sm.png">
+                <img src="img/offer/offer-texture-xxl.png">
+              </picture>
+            </div>
+            <div class="offer__item-image" >
+              <picture>
+                <source media="(min-width: 769px)" srcset="img/offer/offer-02.jpg">
+                <source media="(min-width: 481px)" srcset="img/offer/offer-tablet-02.jpg">
+                <source media="(max-width: 480px)" srcset="img/offer/offer-mobile-02.jpg">
+                <img src="img/offer/offer-02.jpg" class="thumbnail">
+              </picture>
+            </div>
+
+            <div class="offer__box" id="cognitiveCapabilities" data-paralax-speed="0.1">
+              <div class="offer__box-description">
+                <h3 class="offer__box-title">Cognitive capabilities</h3>
+                <p><strong>¿Cómo?</strong></p>
+                <p>Implementamos tecnologías de captación, analítica y decisión en base al dato, como computer visión, sensórica...</p>
+                <p>Porque nuestra ambición es que las empresas sean capaces de imitar las capacidades humanas como escuchar, razonar y actuar en base a un conocimiento, extrayendo el máximo valor al dato.</p>
+                <a class="cta cta--link btn-anchor" href="#footer"><span>→</span> Conóncenos mejor</a>
+              </div>
+            </div>
+          </div> <!-- offer__item -->
+
+          <div class="offer__item offer__item--right">
+            <div class="offer__item-image">
+              <picture>
+                <source media="(min-width: 769px)" srcset="img/offer/offer-03.jpg">
+                <source media="(min-width: 481px)" srcset="img/offer/offer-tablet-03.jpg">
+                <source media="(max-width: 480px)" srcset="img/offer/offer-mobile-03.jpg">
+                <img src="img/offer/offer-03.jpg" class="thumbnail">
+              </picture>
+            </div>
+
+            <div class="offer__box offer__box--left" id="businessImpact" data-paralax-speed="0.1">
+              <div class="offer__box-description">
+                <h3 class="offer__box-title">Business impact</h3>
+                <p><strong>¿Cómo?</strong></p>
+                <p>Impulsamos el valor del dato como activo estratégico, aplicando la IA generamos mayor eficiencia en las decisiones y operaciones de negocio, además de fomentar la economía circular y la creación de nuevos nichos de mercado</p>
+                <a class="cta cta--link btn-anchor" href="#footer"><span>→</span> Conóncenos mejor</a>
+              </div>
+            </div>
+          </div> <!-- offer__item -->
+        </div>
+      </section> <!-- section-offer -->
+
+      <section class="section section-values" id="values">
+        <div class="values">
+          <div class="values__hero">
+            <div class="values__images">
+              <video autoplay="" playsinline="" muted="" loop="" class="values__video-desktop">
+                  <source src="img/video/values-1200.mp4" type="video/mp4">
+              </video>
+              <video autoplay="" playsinline="" muted="" loop="" class="values__video-tablet">
+                  <source src="img/video/values-768.mp4" type="video/mp4">
+              </video>
+              <video autoplay="" playsinline="" muted="" loop="" class="values__video-mobile">
+                  <source src="img/video/values-576.mp4" type="video/mp4">
+              </video>
+            </div>
+            <h2 class="values__title">
+              <span>Nuestros</span> valores
+            </h2>
+          </div> <!-- values__hero -->
+
+          <div class="values__cols js-values">
+            <div class="values__col">
+              <div class="values__col-header" id="headingOne">
+                <h3 class="values__col-title values__col-title--desk">Somos <span>exploradores</span></h3>
+                <button class="values__col-title js-values-title values__col-title--mob" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Somos <span>exploradores</span>
+                </button>
+              </div>
+              <div class="values__col-description js-values-description" id="collapseOne" aria-labelledby="headingOne">
+                <p>La curiosidad, la inconformidad y la tolerancia al error son las características de un explorador Plaiground, por eso nos valemos de la innovación para revolucionar el mundo de los negocios.</p>
+                <a class="cta cta--link btn-anchor" href="#footer"><span>→</span> ¿Innovamos?</a>
+              </div>
+            </div> <!-- values__col -->
+            <div class="values__col">
+              <div class="values__col-header" id="headingTwo">
+                <h3 class="values__col-title values__col-title--desk">Conectamos negocio <span>y tecnología</span></h3>
+                <button class="values__col-title values__col-title--mob js-values-title" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Conectamos negocio <span>y tecnología</span>
+                </button>
+              </div>
+              <div class="values__col-description js-values-description" id="collapseTwo" aria-labelledby="headingTwo">
+                <p>En los negocios la tendencia esta en incorporar más y más algoritmos que automaticen procesos,pero este impacto no deben medirse únicamente por la cantidad.</p>
+                <p>En Plaiground entendemos que es, el enfoque y la definición lo que hacen que la IA tenga un impacto real en los negocios y como consecuencia en la sociedad.</p>
+                <a class="cta cta--link btn-anchor" href="#footer"><span>→</span> ¿Nos conectamos?</a>
+              </div>
+            </div> <!-- values__col -->
+            <div class="values__col">
+              <div class="values__col-header" id="headingThree">
+                <h3 class="values__col-title values__col-title--desk">El talento <span>está ahí fuera</span></h3>
+                <button class="values__col-title values__col-title--mob js-values-title" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  El talento <span>está ahí fuera</span>
+                </button>
+              </div>
+              <div class="values__col-description js-values-description" id="collapseThree" aria-labelledby="headingThree">
+                <p>En un entorno volátil y de necesidades cambiantes, las empresas necesitan agilidad para responder a los distintos desafíos.</p>
+                <p>Por eso, nosotros trabajamos con ecosistemas abiertos, capaces de contar con el talento que mejor se adapte a cada reto o situación</p>
+                <a class="cta cta--link btn-anchor" href="#footer"><span>→</span> ¿Colaboramos?</a>
+              </div>
+            </div> <!-- values__col -->
+          </div> <!-- values__cols -->
+        </div> <!-- values -->
+      </section> <!-- section-values -->
+
+      <section class="section section-team" id="team">
+        <div class="team">
+          <div class="team__header">
+            <h2 class="team__heading">
+              <span class="team__heading-icon">
+                <svg>
+                  <use xlink:href="../../img/sprite.svg#ai">
+                </svg>
+              </span>
+              Equipo
+            </h2>
+          </div>
+          <div class="team__content js-team-carousel">
+            <div class="team__item">
+              <div class="team__image">
+                <img src="img/team/team-04.jpg" alt="">
+              </div>
+              <div class="team__description">
+                <h3 class="team__title">Leticia Gómez</h3>
+                <a href="https://www.linkedin.com/in/leticia-g%C3%B3mez-rivero-59194317/" class="team__rrss" target="_blank" rel="noopener">
+                  <span class="team__rrss-icon">
+                    <svg>
+                      <use xlink:href="../../img/sprite.svg#linkedin">
+                    </svg>
+                  </span>
+                </a>
+                <p>Consultora de estrategia con amplia experiencia en negocios digitales, ha formado parte de los equipos de consultoría de KPMG, Banco Santander y Minsait.</p>
+                <p>Licenciada en LADE con reconocimiento de Excelencia por la Comunidad de Madrid, especializada en dirección estratégica y MSc in M&A, ahora traslada su visión de negocio y su experiencia impulsando joint ventures digitales al modelo Plaiground de innovación abierta</p>
+              </div>
+            </div> <!-- team__item -->
+            <div class="team__item">
+              <div class="team__image">
+                <img src="img/team/team-01.jpg" alt="">
+              </div>
+              <div class="team__description">
+                <h3 class="team__title">José Luis Flórez</h3>
+                <a href="https://www.linkedin.com/in/joseluisflorez/" class="team__rrss" target="_blank" rel="noopener">
+                  <span class="team__rrss-icon">
+                    <svg>
+                      <use xlink:href="../../img/sprite.svg#linkedin">
+                    </svg>
+                  </span>
+                </a>
+
+                <p>Híbrido entre emprendedor y consultor tecnológico en gigantes como Accenture y Minsait, ha fundado las startups Neometrics y dive.tv, innovando en torno a IA. Matemático y experto en Machine Learning, ahora lidera el lanzamiento de Plaiground con la ambición de convertirla en referente global.</p>
+              </div>
+            </div> <!-- team__item -->
+            <div class="team__item">
+              <div class="team__image">
+                <img src="img/team/team-02.jpg" alt="">
+              </div>
+              <div class="team__description">
+                <h3 class="team__title">Carlos Gutiérrez</h3>
+                <a href="https://www.linkedin.com/in/carlos-gutiérrez-hernández/" class="team__rrss" target="_blank" rel="noopener">
+                  <span class="team__rrss-icon">
+                    <svg>
+                      <use xlink:href="../../img/sprite.svg#linkedin">
+                    </svg>
+                  </span>
+                </a>
+                <p>Especialista en analítica avanzada y nuevos modelos de negocio, con experiencia desde la conceptualización de modelos básicos hasta construir la arquitectura de analitica y reporting en BBVA.</p>
+                <p>Licenciado en Telecomunicaciones, especializado en ingeniería biomédica, tecnologías BigData y MBA. Entusiasta de los modelos de colaboración abiertos y siempre buscando la manera de llevar los avances en investigación al campo de los negocios.</P>
+              </div>
+            </div> <!-- team__item -->
+            <div class="team__item">
+              <div class="team__image">
+                <img src="img/team/team-03.jpg" alt="">
+              </div>
+              <div class="team__description">
+                <h3 class="team__title">Gorka Bengochea</h3>
+
+                <a href="https://www.linkedin.com/in/gorkabengochea/" class="team__rrss" target="_blank" rel="noopener">
+                  <span class="team__rrss-icon">
+                    <svg>
+                      <use xlink:href="../../img/sprite.svg#linkedin">
+                    </svg>
+                  </span>
+                </a>
+                <p>Creatividad y tecnología son las pasiones que le hacen saltar de la cama cada mañana.</p>
+                <p>Su última aventura fue encargarse del machine learning en el equipo de Google Cloud de Accenture, ha trabajado en San Francisco, se graduó como Ingeniero Industrial en la Universidad Politécnica de Madrid y desde el 2015 está enamorado de la Inteligencia Artificial. </p>
+                <p>Cuando supo que Plaiground iba a nacer no le tembló el pulso para apuntarse.</p>
+              </div>
+            </div> <!-- team__item -->
+            <div class="team__item">
+              <div class="team__image">
+                <img src="img/team/team-05.jpg" alt="">
+              </div>
+              <div class="team__description">
+                <h3 class="team__title">Miguel Peláez</h3>
+                <a href="https://www.linkedin.com/in/mpelaezfernandez/" class="team__rrss" target="_blank" rel="noopener">
+                  <span class="team__rrss-icon">
+                    <svg>
+                      <use xlink:href="../../img/sprite.svg#linkedin">
+                    </svg>
+                  </span>
+                </a>
+                <p>Obsesionado con innovar con nuevos modelos de negocio basados en explotación de datos y algoritmos de IA.</p>
+                <p>Experiencia en múltiples industrias y múltiples países. Emprendedor social en entornos de ciencia y tecnología sobre el talento del futuro.</p>
+              </div>
+            </div> <!-- team__item -->
+          </div>
+        </div> <!-- team -->
+
+        <div class="tac">
+          <a class="cta cta--xl" href="https://www.linkedin.com/company/plaiground/" target="_blank" rel="noopener">Síguenos en Linkedin</a>
+        </div>
+
+      </section> <!-- section-team -->
+    </div>
+  </main><!--//MAIN-->
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer__top">
+      <h2 class="footer__title">Contacto</h2>
+      <div role="form" class="wpcf7" id="wpcf7-f176-p42-o1" lang="es-ES" dir="ltr">
+        <div class="screen-reader-response" aria-live="polite"></div>
+        <form action="/#wpcf7-f176-p42-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+          <div style="display: none;">
+            <input type="hidden" name="_wpcf7" value="176">
+            <input type="hidden" name="_wpcf7_version" value="5.1.9">
+            <input type="hidden" name="_wpcf7_locale" value="es_ES">
+            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f176-p42-o1">
+            <input type="hidden" name="_wpcf7_container_post" value="42">
+          </div>
+          <p>
+            <label> Nombre y apellidos*<br>
+              <span class="wpcf7-form-control-wrap your-name">
+                <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+              </span>
+            </label>
+          </p>
+          <p>
+            <label> Tu email de trabajo*<br>
+              <span class="wpcf7-form-control-wrap your-email">
+                <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false">
+              </span>
+            </label>
+          </p>
+          <p>
+            <label> La web de tu empresa<br>
+              <span class="wpcf7-form-control-wrap your-web">
+                <input type="text" name="your-web" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false">
+              </span>
+            </label>
+          </p>
+          <p>
+            <label> Tu país<br>
+              <span class="wpcf7-form-control-wrap your-country">
+                <input type="text" name="your-country" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false">
+              </span>
+            </label>
+          </p>
+          <p>
+            <label> ¿Cómo nos conociste?<br>
+              <span class="wpcf7-form-control-wrap Cmonosconociste">
+                <select name="Cmonosconociste" class="wpcf7-form-control wpcf7-select" aria-invalid="false">
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                </select>
+              </span>
+            </label>
+          </p>
+          <p>
+            <input type="submit" value="Enviar" class="wpcf7-form-control wpcf7-submit">
+          </p>
+          <div class="wpcf7-response-output wpcf7-display-none" aria-hidden="true"></div>
+        </form>
+      </div>
+    </div> <!-- footer__top -->
+    <div class="footer__bottom">
+      <a href="/" class="footer__logo">
+        <img src="img/icon/plaiground.svg" alt="Plaiground">
+      </a>
+
+      <ul class="footer__nav">
+        <li>
+          <a href="#showcase" class="btn-anchor">Noticias</a>
+        </li>
+        <li>
+          <a href="#values" class="btn-anchor">Valores</a>
+        </li>
+        <li>
+          <a href="#offer" class="btn-anchor">Servicios</a>
+        </li>
+        <li>
+          <a href="#team" class="btn-anchor">Equipo</a>
+        </li>
+        <li>
+          <a href="#footer" class="btn-anchor">Contacto</a>
+        </li>
+      </ul> <!-- footer__nav -->
+    </div> <!-- footer__bottom -->
+  </footer> <!-- footer -->
+</div>
+
+  <script type="text/javascript" src="js/vendor/jquery-3.3.1.min.js"></script>
+  <script src="js/vendor/svg4everybody.min.js"></script>
+  <script src="js/vendor/slick.min.js"></script>
+  <script src="js/vendor/simpleParallax.js"></script>
+  <script src="js/vendor/VirtualScroll.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    // svg icons ie11
+    svg4everybody({
+      nosvg: true, // shiv <svg> and <use> elements and use image fallbacks
+      polyfill: true // polyfill <use> elements for External Content
+    });
+
+    // paralax images
+    const images = document.querySelectorAll('.thumbnail');
+    new simpleParallax(images, {
+      orientation: 'down'
+    });
+
+    // scrollbar
+    // var Scrollbar = window.Scrollbar;
+
+    // Scrollbar.init(document.querySelector('.main-scrollbar'));
+  </script>
+
+</body>
+</html>
